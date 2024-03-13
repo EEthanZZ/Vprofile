@@ -1,5 +1,6 @@
 FROM nginx
 LABEL "project"="vprofile"
 
-RUN rm -rf /etc/nginx/conf.d/default.conf
-COPY nginvproapp.conf /etc/nginx/conf.d/vproapp.conf
+WORKDIR /etc/nginx/conf.d/
+RUN rm -f default.conf
+COPY nginvproapp.conf ./vproapp.conf
