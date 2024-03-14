@@ -106,7 +106,7 @@ server{
         proxy_set_header    X-Real-IP       \$remote_addr;
         proxy_set_header    X-Forwarded-For \$proxy_add_x_forwarded_for;
         proxy_set_header    X-Forwarded-Proto http;
-    }
+    
 }
 EOT
 ln -s /etc/nginx/sites-available/sonarqube /etc/nginx/sites-enabled/sonarqube
